@@ -11,9 +11,23 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      flex-direction: column;
+    }
+    button {
+      margin-top: 1rem;
     }
   </style>
   <body>
-    <button>Click Me</button>
+    <div id="count">0</div>
+    <button id="button">Click Me</button>
+    <script>
+      var button = document.getElementById('button')
+      var count = document.getElementById('count')
+      var x = 0
+      button.onclick = function () {
+        x += 1
+        count.innerHTML = x
+      }
+    </script>
   </body>
 </html>
